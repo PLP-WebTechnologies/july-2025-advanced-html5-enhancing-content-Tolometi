@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fb;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #2a9d8f;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background: #f0f0f0;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        button {
+            background: #2a9d8f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #21867a;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Diani Fresh Organic Farm</h1>
+    <p>Producing the best plant and animal products</p>
+</header>
+
+<main>
+    <!-- Lists Section -->
+    <section>
+        <h2>Plant Products</h2>
+        <ul>
+            <li>Maize</li>
+            <li>Citruces</li>
+            <li>Passion Fruits</li>
+            <li>Vegetables</li>
+        </ul>
+        <h2>Animal Products</h2>
+        <ol type="i" start="1">
+            <li>Eggs</li>
+            <li>Chicken Meat</li>
+            <li>Rabbit</li>
+        </ol>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Price List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Unit of measurement</th>
+                    <th>Price per unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Eggs</td>
+                    <td>Tray</td>
+                    <td>Ksh. 500 </td>
+                </tr>
+                <tr>
+                    <td>Chicken capon</td>
+                    <td>Kilograms</td>
+                    <td>Ksh. 500</td>
+                </tr>
+                <tr>
+                    <td>Rabit Meat</td>
+                    <td>Kilograms</td>
+                    <td>Ksh. 800</td>
+                </tr>
+                <tr>
+                    <td>Passion Fruits</td>
+                    <td>Kilograms</td>
+                    <td>Ksh. 250</td>
+                </tr>
+                    <tr>
+                    <td>Citrus Fruits</td>
+                    <td>Kilograms</td>
+                    <td>Ksh. 70</td>
+                    </tr>
+                    <tr>
+                    <td>Vegetables</td>
+                    <td>Bunch</td>
+                    <td>Ksh. 50</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Introduction Video</h2>
+        <video controls width="100%">
+  <source src="Video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </section>
+
+    <!-- HTML5 Form Section -->
+    <section>
+        <h2>Farm Virtual Subscription Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your name here" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" 
+                       pattern="^\+?\d{1,3}\s?\d{3}\s?\d{3}\s?\d{3}$" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="Kenya" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Your username" required minlength="4">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 8 characters" minlength="8" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select one...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="4"></textarea>
+<!-- Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Farm Virtual Subscription – Terms & Conditions</h2>
+        <ol>
+            <li><strong>Service Overview:</strong> Subscription grants access to our online marketplace, seasonal crop updates, and farmer support services.</li>
+            <li><strong>Subscription Plans & Payment:</strong> Fees billed according to selected plan. Payments made in advance. No refunds unless stated in cancellation policy.</li>
+            <li><strong>Product & Service Availability:</strong> Product availability may vary by season. Delivery times may be affected by weather or transport delays.</li>
+            <li><strong>User Responsibilities:</strong> Provide accurate contact, delivery, and payment info. Follow all applicable laws. No misuse of the platform.</li>
+            <li><strong>Cancellations & Refunds:</strong> Subscriptions may be canceled anytime. Physical orders cancellable within 24 hours if unshipped.</li>
+            <li><strong>Intellectual Property:</strong> All website content remains property of Farm Virtual.</li>
+            <li><strong>Limitation of Liability:</strong> Farm Virtual is not liable for losses from product shortages, delays, or outside events.</li>
+            <li><strong>Privacy Policy:</strong> Personal data handled per our privacy policy and not shared without consent.</li>
+            <li><strong>Amendments:</strong> Terms may change; updates will be posted online or sent via email.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    // Modal script
+    const modal = document.getElementById("termsModal");
+    const btn = document.getElementById("viewTerms");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Form Example</p>
+</footer>
+</body>
+</html>
